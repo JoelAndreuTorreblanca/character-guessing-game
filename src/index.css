@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  /* Color Palette - Soft & Pastel */
+  --bg-color: #f8f9fc;
+  --surface-color: #ffffff;
+  
+  --primary-accent: #9b8bf4; /* Soft Lavender */
+  --secondary-accent: #ffb5a7; /* Peach */
+  --tertiary-accent: #a8e6cf; /* Mint Green */
+  
+  --text-main: #2d3436; /* Dark Charcoal */
+  --text-secondary: #636e72; /* Soft Grey */
+  --border-light: #ecf0f1;
+  --danger-soft: #ffb5a7; /* Same as peach but semantic */
+
+  --shadow-soft: 0 8px 24px rgba(149, 157, 165, 0.1);
+  --shadow-hover: 0 12px 32px rgba(149, 157, 165, 0.15);
+  
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  font-family: var(--font-family);
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

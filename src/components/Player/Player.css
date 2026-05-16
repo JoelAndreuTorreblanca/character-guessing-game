@@ -1,0 +1,134 @@
+.player {
+    background-color: var(--surface-color);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    height: 100%;
+}
+
+.player__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    gap: 12px;
+}
+
+.player__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.player__pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--border-light);
+    background-color: var(--bg-color);
+}
+
+.player__name {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.hint-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: var(--primary-accent);
+    color: white;
+    border-radius: var(--radius-pill);
+    padding: 6px 16px;
+    margin-top: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s, opacity 0.2s;
+    font-size: 0.9rem;
+}
+
+.hint-btn:not([disabled]):hover {
+    background-color: #8a78e8;
+}
+
+.hint-btn[disabled] {
+    background-color: var(--text-secondary);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.player__right {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hint__container {
+    width: 100%;
+    flex-grow: 1;
+    background-color: var(--bg-color);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 100%;
+    min-height: 120px;
+}
+
+.hint__container__title {
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+    padding: 8px 0;
+    font-weight: 600;
+    color: var(--text-main);
+    background-color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.hint__container__body {
+    padding: 12px;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hint__container__body p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--surface-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border: 1px solid var(--border-light);
+    margin: 0;
+}
+
+.hint__index {
+    font-weight: 700;
+    color: var(--primary-accent);
+    margin-right: 4px;
+}
+
+/* We don't need grid overrides for orientation/padding anymore since it's always vertical */

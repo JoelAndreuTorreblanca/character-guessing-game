@@ -1,0 +1,70 @@
+#playerScreen {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.players__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.add__player__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px auto 0;
+    color: var(--tertiary-accent);
+    transition: color 0.2s;
+}
+
+.add__player__button:hover {
+    color: #8edfc0;
+}
+
+.start__game__button {
+    text-align: center;
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 16px 24px;
+    border-radius: var(--radius-lg);
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    margin-top: 40px;
+    transition: box-shadow 0.2s, background-color 0.2s;
+    width: 100%;
+}
+
+.start__game__button:hover {
+    box-shadow: var(--shadow-hover);
+    background-color: #8a78e8;
+}

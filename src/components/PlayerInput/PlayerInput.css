@@ -1,0 +1,61 @@
+.playerInput {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: box-shadow 0.2s, border-color 0.2s;
+    width: 100%;
+}
+
+.playerInput:focus-within {
+    border-color: var(--primary-accent);
+    box-shadow: var(--shadow-hover);
+}
+
+.player__id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.player__remove {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.input-player__name,
+.input-player__name--input {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    flex-grow: 1;
+}
+
+.input-player__name {
+    cursor: pointer;
+    user-select: none;
+}
+
+.input-player__name--input {
+    border: unset;
+    width: 100%;
+}
+
+.input-player__name--input::placeholder {
+    color: #b2bec3;
+}

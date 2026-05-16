@@ -1,0 +1,38 @@
+#gameScreen {
+    height: 100%;
+    position: relative;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Grid columns */
+.gameScreen__players {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Siempre 12 columnas */
+    grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Por defecto, los jugadores ocupan todo (para 1 solo jugador) */
+.player { grid-column: span 12; }
+
+/* Casos específicos usando tus clases dinámicas */
+.grid__2 .player { grid-column: span 6; }
+.grid__3 .player { grid-column: span 4; }
+.grid__4 .player { grid-column: span 6; } /* 2 por fila */
+
+/* Caso de 5 jugadores (2 arriba, 3 abajo) */
+.grid__5 .player { grid-column: span 4; }                     /* Los de abajo ocupan 4 (3x4=12) */
+.grid__5 .player:nth-child(-n + 2) { grid-column: span 6; }   /* Los 2 primeros ocupan 6 (2x6=12) */
+
+/* Caso de 6 jugadores (3 por fila) */
+.grid__6 .player { grid-column: span 4; }
+
+/* Caso de 7 jugadores (3 arriba, 4 abajo) */
+.grid__7 .player { grid-column: span 3; }                     /* Los de abajo ocupan 3 (4x3=12) */
+.grid__7 .player:nth-child(-n + 3) { grid-column: span 4; }   /* Los 3 primeros ocupan 4 (3x4=12) */
+
+/* Caso de 8 jugadores (4 por fila) */
+.grid__8 .player { grid-column: span 3; }
