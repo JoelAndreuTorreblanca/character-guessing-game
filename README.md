@@ -1,75 +1,36 @@
-# React + TypeScript + Vite
+# Character Guessing Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Local multiplayer game of guessing a character set by the other players.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Designed to be run locally.
 
-## React Compiler
+## Setup
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Requires Node.js version 20.19+ or 22.12+.
+- Create a file `.env` in the root directory following the example in `.env.example`.
+- Run `npm run dev` to start the application.
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+#### IMPORTANT
+>
+> This project is designed to append the API key as a query parameter at the end of the endpoint URL, like so:
+> 
+> `https://api.endpointurl.com/some-endpoint?key=YOUR_API_KEY`
+> 
+> Please ensure that you use an API service that supports this request format (such as Google Gemini).
+>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## How to Play
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Player Registration:** On the first screen, enter the names of all participants.
+2. **Character Setup:** On the game screen, secretly assign a character to each player.
+3. **Gameplay & Interaction:**
+   - **Player Cells:** Each player has a dedicated cell displaying their name and hints.
+   - **Options Menu (Top-Right Button):**
+     - **Reveal Character:** Reveals the character to everyone. This is a peek-and-hold feature (only visible while the button is held down).
+     - **Edit Character:** Allows updating the character's name or its description.
+   - **AI Hints:**
+     - Each player has a **Hint** button. Pressing it generates a custom, AI-generated hint based on their character.
+     - **Hint Limits:** Each player is limited to **3 hints** in total. To help you narrow down the guess, each successive hint is designed to be more revealing than the last!
