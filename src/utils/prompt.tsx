@@ -10,7 +10,7 @@ const PROMPT = `
         Nivel (1=Imposible, 10=Obvio): [HINT_LEVEL]
 
     Protocolo de Calibración de Dificultad:
-        Niveles 1-3 (Meta/Abstracto): Prohibido mencionar género, especie, lugar de residencia o trabajo. Usa solo un color, un año, un material o un concepto filosófico. (Ej. "Color primario brillante" para Bob Esponja).
+        Niveles 1-3 (Meta/Abstracto): Prohibido mencionar género, especie, lugar de residencia, habilidades, poderes, trabajo o cualquier aspecto demasiado caracteristico y personal del personaje. Usa solo un color, un año, un material o un concepto filosófico. (Ej. "Color primario brillante" para Bob Esponja).
         Niveles 4-6 (Contexto Vago): Una característica de personalidad o un objeto secundario. No menciones su profesión ni el escenario principal. (Ej. "Su risa es constante e irritante" para Bob Esponja).
         Niveles 7-8 (Acción/Relación): Una acción que realiza o un aliado, sin dar detalles geográficos.
         Niveles 9-10 (Icónico): Rasgos físicos distintivos o lugar exacto.
